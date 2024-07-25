@@ -26,6 +26,7 @@ export const registerUser = createAsyncThunk('auth/register', async (data, thunk
   }
 });
 
+
 export const logoutUser = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await logout();

@@ -7,7 +7,7 @@ const HomePage = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Hello {user.name}</h1>
+      <h1>Hello </h1>
       <div className={styles.recipeGrid}>
       </div>
     </div>

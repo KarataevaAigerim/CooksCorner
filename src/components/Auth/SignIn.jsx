@@ -23,15 +23,21 @@ const SignIn = () => {
     onSubmit: async (values) => {
       const result = await dispatch(loginUser(values));
       if (loginUser.fulfilled.match(result)) {
+        console.log('Login successful, navigating to home');
         navigate('/home');
+      } else {
+        console.log('Login failed:', result);
       }
     },
   });
 
   return (
     <div className={styles.container}>
-      <h1>Welcome back to Cooks Corner</h1>
-      <form onSubmit={formik.handleSubmit}>
+      <div className={styles.sectionA}>
+        <h1>Welcome back To <strong>Cooks Corner</strong></h1>
+      </div>
+      <div className={styles.sectionB}> 
+         <form onSubmit={formik.handleSubmit}>
         <div>
           <label htmlFor="email">Email</label>
           <input
@@ -60,6 +66,10 @@ const SignIn = () => {
       <p>
         Don't have an account? <a href="/register">Register here</a>
       </p>
+
+      </div>
+      
+     
     </div>
   );
 };

@@ -1,51 +1,79 @@
 .container {
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    width: 300px;
-    margin: auto;
-    margin-top: 100px;
     text-align: center;
-  
-    h1 {
-      color: orange;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
+ .sectionA {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgba(250, 158, 49, 1);
+    text-align: center;
+    justify-content: center;
+    height: 300px;
+ }  
+ 
+ .sectionB {
+    display: flex;
+    flex-direction: row;
+ }
+
+
+
+  h1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    width: 30%;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(250, 158, 49, 1);
     }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-  
-      label {
-        margin-top: 10px;
-      }
-  
-      input {
-        padding: 8px;
-        margin-top: 5px;
-      }
-  
-      button {
-        margin-top: 20px;
-        padding: 10px;
-        background-color: orange;
-        border: none;
-        color: white;
-        cursor: pointer;
-        border-radius: 4px;
-      }
-  
-      button:disabled {
-        background-color: grey;
-      }
+
+    input {
+      border-radius: 42px;
+      background-color: rgba(237, 237, 237, 1);
+      border: none;
+      width: 480px;
+      height: 56px;
+      padding: 9px 24px;
+
     }
-  
-    p {
+
+    button {
       margin-top: 20px;
-  
-      a {
-        color: orange;
-        text-decoration: none;
-      }
+      padding: 10px;
+      background-color: rgba(250, 158, 49, 1);
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:disabled {
+      background-color: grey;
     }
   }
+
+  p {
+    margin-top: 20px;
+
+    a {
+      color: orange;
+      text-decoration: none;
+    }
+  }
+}
