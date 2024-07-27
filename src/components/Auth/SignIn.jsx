@@ -63,7 +63,7 @@ const SignIn = () => {
         {error && <div>{error}</div>}
         <button type="submit" disabled={loading}>Sign In</button>
       </form>
-      <p>
+      <p className={styles.text}>
         Don't have an account? <a href="/register">Register here</a>
       </p>
 
