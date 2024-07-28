@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import SignIn from './components/Auth/SignIn';
 import SignUp from './components/Auth/SignUp';
 import HomePage from './components/Home/HomePage';
-import EmailConfirmation from './components/Auth/EmailConfirmation';
 import SplashScreen from './SplashScreen';
 
 const App = () => {
@@ -28,7 +27,6 @@ const App = () => {
         <Route path="/" element={user ? <Navigate to="/home" /> : <SignIn />} />
         <Route path="/register" element={<SignUp />} />
         <Route path="/home" element={<HomePage /> } />
-        <Route path="/confirm-email" element={<EmailConfirmation />} />
       </Routes>
   );
 };
