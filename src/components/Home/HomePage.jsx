@@ -161,24 +161,26 @@ const HomePage = () => {
             </nav>
             <div className={styles.homepage}>
                 <p>Hello, Aigerim!</p>
-                <div className={styles.recipeGrid}>
+                <div className={styles.title}>
                     <p className={styles.categoryText}>Category</p>
-                    <div className={styles.tab}>
-                        {['Breakfast', 'Lunch', 'Dinner'].map((tab) => (
-                            <button
-                                key={tab}
-                                className={`${styles.tablinks} ${activeTab === tab ? styles.active : ''}`}
-                                onClick={() => openCategory(tab)}
-                            >
-                                {tab}
-                            </button>
-                        ))}
-                    </div>
-                    <div className={styles.tabcontent}>
-                        {activeTab === 'Breakfast' && <div className={styles.recipeGrid}></div>}
-                        {activeTab === 'Lunch' && <div className={styles.recipeGrid}></div>}
-                        {activeTab === 'Dinner' && <div className={styles.recipeGrid}></div>}
-                    </div>
+                </div>
+                <div className={styles.content}>
+                  <div className={styles.tab}>
+                      {['Breakfast', 'Lunch', 'Dinner'].map((tab) => (
+                          <button
+                              key={tab}
+                              className={`${styles.tablinks} ${activeTab === tab ? styles.active : ''}`}
+                              onClick={() => openCategory(tab)}
+                          >
+                              {tab}
+                          </button>
+                      ))}
+                  </div>
+                  <div className={styles.tabcontent}>
+                      {activeTab === 'Breakfast' && <div className={styles.recipeGrid}></div>}
+                      {activeTab === 'Lunch' && <div className={styles.recipeGrid}></div>}
+                      {activeTab === 'Dinner' && <div className={styles.recipeGrid}></div>}
+                  </div>
                 </div>
             </div>
         </div>
